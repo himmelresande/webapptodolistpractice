@@ -1,69 +1,81 @@
+/* Объявление CSS-переменных (переменных корня) */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; /* Устанавливаем шрифт для всего документа */
+  line-height: 1.5; /* Устанавливаем высоту строки текста */
+  font-weight: 400; /* Устанавливаем начальное значение для толщины шрифта */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light dark; /* Указываем поддержку темного и светлого режимов */
+  color: rgba(255, 255, 255, 0.87); /* Устанавливаем цвет текста (белый с неполной непрозрачностью) */
+  background-color: #242424; /* Устанавливаем цвет фона (темно-серый) */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-synthesis: none; /* Запрещаем синтез шрифтов */
+  text-rendering: optimizeLegibility; /* Оптимизируем читаемость текста */
+  -webkit-font-smoothing: antialiased; /* Включаем сглаживание шрифтов для WebKit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Включаем сглаживание шрифтов для macOS */
+  -webkit-text-size-adjust: 100%; /* Устанавливаем размер текста по умолчанию для WebKit */
 }
 
+/* Стили для гиперссылок (ссылок) */
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 500; /* Устанавливаем толщину шрифта */
+  color: #646cff; /* Устанавливаем цвет текста ссылок */
+  text-decoration: inherit; /* Наследуем стиль текста ссылок от родительских элементов */
 }
+
+/* Стили для состояния "hover" гиперссылок (при наведении) */
 a:hover {
-  color: #535bf2;
+  color: #535bf2; /* Изменяем цвет текста ссылок при наведении */
 }
 
+/* Стили для элемента body */
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 0; /* Убираем отступы по умолчанию */
+  display: flex; /* Устанавливаем отображение элементов внутри body как flex-контейнера */
+  place-items: center; /* Центрируем элементы по горизонтали и вертикали */
+  min-width: 320px; /* Устанавливаем минимальную ширину body */
+  min-height: 100vh; /* Устанавливаем минимальную высоту body равной высоте видимой области окна (100vh) */
 }
 
+/* Стили для заголовка первого уровня (h1) */
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3.2em; /* Устанавливаем размер шрифта заголовка */
+  line-height: 1.1; /* Устанавливаем высоту строки текста заголовка */
 }
 
+/* Стили для кнопки (button) */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  border-radius: 8px; /* Устанавливаем скругленные углы кнопки */
+  border: 1px solid transparent; /* Убираем граничную линию кнопки */
+  padding: 0.6em 1.2em; /* Устанавливаем внутренние отступы кнопки */
+  font-size: 1em; /* Устанавливаем размер шрифта кнопки */
+  font-weight: 500; /* Устанавливаем толщину шрифта кнопки */
+  font-family: inherit; /* Наследуем шрифт от родительских элементов */
+  background-color: #1a1a1a; /* Устанавливаем цвет фона кнопки */
+  cursor: pointer; /* Устанавливаем указатель при наведении на кнопку */
+  transition: border-color 0.25s; /* Добавляем плавный переход для граничной линии */
 }
+
+/* Стили для состояния "hover" кнопки (при наведении) */
 button:hover {
-  border-color: #646cff;
+  border-color: #646cff; /* Изменяем цвет граничной линии кнопки при наведении */
 }
+
+/* Стили для состояния "focus" и "focus-visible" кнопки (при фокусировке) */
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto -webkit-focus-ring-color; /* Устанавливаем стили для фокуса (подсветка) кнопки */
 }
 
+/* Медиа-запрос для темы "light" (светлая тема) */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #213547; /* Изменяем цвет текста в светлой теме */
+    background-color: #ffffff; /* Изменяем цвет фона в светлой теме */
   }
   a:hover {
-    color: #747bff;
+    color: #747bff; /* Изменяем цвет текста ссылок при наведении в светлой теме */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Изменяем цвет фона кнопки в светлой теме */
   }
 }
